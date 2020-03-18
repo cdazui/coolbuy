@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import {Switch,Route,Redirect} from "react-router-dom"
+import loadable from "react-loadable"
+// 引入loading
+import Loading from "./components/loading"
+// 路由懒加载
+const Home =loadable({
+  loader:_=>import("./pages/home"),
+  loading:Loading
+})
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <Switch>
+        <Redirect from="/" to="/home" exact/>
+        <Route path="/home" render={()=>{
+          return <Home />
+        }}></Route>
+      </Switch>
+    )
+  }
 }
-
-export default App;

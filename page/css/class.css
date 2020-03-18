@@ -1,0 +1,101 @@
+.container{
+    height: 100%;
+}
+.class-header{
+    width: 100%;
+    height: 1.12rem;
+    background: #fff;
+    padding: .24rem;
+    border-bottom: 1px solid #ddd;
+}
+.class-header div{
+    width: 100%;
+    height: 100%;
+    background: rgb(238, 239, 241);
+    display: flex;
+    align-items: center;
+    padding: .24rem;
+    color: rgb(149, 149, 149);
+    font-size: .28rem;
+}
+.class-container{
+    height: 100%;
+    display: flex;
+}
+/* bar */
+.class-bar{
+    flex-shrink: 0;
+    width: 1.68rem;
+    height: 100%;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding-top: .32rem;
+}
+.class-bar li{
+    width: 100%;
+    height: .36rem;
+    margin-bottom: .48rem;
+    text-align: center;
+    border-left:.08rem solid #fff;
+}
+.class-bar .active{
+    border-left:.08rem solid #c33;
+    font-weight: 800;
+}
+/* content */
+.class-content{
+   flex:1;
+    background: #fff;
+
+}
+.class-banner{
+    width: 100%;
+    height:2.4rem ;
+    padding:.32rem .32rem 0 ;
+}
+.class-banner img{
+    width: 5.2rem;  
+}
+.class-title{
+    width: 100%;
+    height: 1rem;
+    padding: .32rem;
+    font-size: 13px;
+    line-height: 18.5px;
+    color: rgb(112, 112, 112);
+}
+.class-goods{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.class-goods li{
+    width: 33%;
+    height: 1.78rem;
+    margin-bottom: .32rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.class-goods li div{
+    width:1.44rem ;
+    height: 1.44rem;
+    margin-bottom: .04rem;
+
+}
+.class-goods li img{
+    width: 100%;
+    height: 100%;
+
+}
+.class-goods p{
+    width: 100%;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    font-size: 11px;
+    color: rgb(112, 112, 112);
+
+}
