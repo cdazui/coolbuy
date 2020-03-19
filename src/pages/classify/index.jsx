@@ -1,7 +1,8 @@
 import React, { Component,Fragment } from 'react'
 import { HeaderContainer } from '../home/styled'
 
-export default class index extends Component {
+
+export default class Classify extends Component {
     render() {
         return (
             <Fragment>
