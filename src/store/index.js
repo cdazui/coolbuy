@@ -1,10 +1,28 @@
 import {createStore,applyMiddleware} from "redux"
 import reduxThunk from "redux-thunk"
+import {combineReducers}  from "redux-immutable"
 import {composeWithDevTools} from "redux-devtools-extension"
-import {combineReducers} from "redux-immutable";
 import home from "./reducers/home"
-const reducer=combineReducers({
-    home
+import vendor from "./reducers/vendor"
+import find from "./reducers/find"
+import article from "./reducers/article"
+import classify from "./reducers/classify"
+import goodsList from "./reducers/goodsList"
+import details from "./reducers/details"
+import cart from "./reducers/cart"
+import search from "./reducers/search"
+const reducer =combineReducers({
+    home,
+    vendor,
+    find,
+    article,
+    classify,
+    goodsList,
+    details,
+    cart,
+    search
 })
-const store=createStore(reducer,composeWithDevTools(applyMiddleware(reduxThunk)));
-export default store;
+
+const store=createStore(reducer,composeWithDevTools(applyMiddleware(reduxThunk)))
+
+export default store
